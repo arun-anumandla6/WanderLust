@@ -97,6 +97,9 @@ app.use((req, res, next) => {
     res.locals.currUser = req.user;
     next();
 });
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 // app.get("/demouser", async (req, res) => {
 //         const fakeUser = new User({
 //             email: "arun@gmail.com",
@@ -120,9 +123,11 @@ app.use((err,req,res,next)=>{
     res.status(statusCode).render("Error.ejs",{err});
 
 });
-app.listen(8080,()=>{
-    console.log("Server is running on port 8080");
-})
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
 
 // Joi validation middleware
 // const validateListing=(req,res,next)=>{
