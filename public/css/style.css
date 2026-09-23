@@ -11,12 +11,19 @@ body{
     background:#fff;
 }
 
-.container-fluid{
+.page-container{
     flex:1;
     max-width:1400px;
     margin:0 auto;
-    padding-left:2rem !important;
-    padding-right:2rem !important;
+    width:100%;
+}
+
+.navbar .container-fluid{
+    max-width:100% !important;
+    width:100%;
+    margin:0;
+    padding-left:2rem;
+    padding-right:2rem;
 }
 
 /* =========================
