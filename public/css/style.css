@@ -1,120 +1,167 @@
 body{
-  font-family: "Plus Jakarta Sans", sans-serif !important;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-  padding-left: 20px;
-  padding-right: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    background:#fff;
 }
+
 .container-fluid{
-    flex: 1;
+    flex:1;
+    max-width:1400px;
+    margin:0 auto;
+    width:100%;
 }
+
+/* Navbar */
 .navbar{
-    height: 5rem;
-    background-color: #fff;
+    height:5rem;
+    background:#fff;
+    border-bottom:1px solid #ebebeb;
 }
 
 .fa-compass{
-    font-size: 2rem;
-    color: #ff385c;
+    color:#ff385c;
+    font-size:2rem;
 }
 
 .nav-link{
-    color: #000 !important;
+    color:#222 !important;
 }
 
-.f-info-links a{
-    text-decoration: none;
-    color: #222222;
-}
-
-.f-info-links a:hover{
-    text-decoration: underline;
-}
-
-.f-info-links{
-    width: 100%;
-}
-
-.f-info-socials i{
-    font-size: 1.2rem;
-    margin-right: 1rem;
-}
-
-.f-info-socials{
-    width: 100%;
+/* Footer */
+.f-info{
+    text-align:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    height:8rem;
+    background:#ebebeb;
+    margin-top:2rem;
 }
 
 .f-info-links,
 .f-info-socials,
 .f-info-brand{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 }
 
-.f-info{
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 8rem;
-    background-color: #ebebeb;
+.f-info-links a{
+    text-decoration:none;
+    color:#222;
+    margin:0 .5rem;
 }
+
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+
+.f-info-socials i{
+    font-size:1.2rem;
+    margin:0 .5rem;
+}
+
+/* Listing Cards */
 .listing-card{
     border:none !important;
     margin-bottom:2rem;
+    transition:all .2s ease;
 }
+
+.listing-card:hover{
+    transform:translateY(-4px);
+}
+
 .card-img-top{
-    border-radius:2rem !important;
-    width:100%;
+    width:100% !important;
+    height:20rem;
     object-fit:cover;
+    border-radius:1rem !important;
 }
+
 .card-body{
-    padding:0 !important;
+    padding:.5rem !important;
 }
+
+.card-text{
+    color:#222;
+}
+
 .card-text p{
-    font-weight:400 !important;
+    margin:0;
+    font-weight:400;
 }
+
 .listing-link{
-    text-decoration:none!important;
+    text-decoration:none;
 }
+
 .card-img-overlay{
     opacity:0;
+    border-radius:1rem;
 }
+
 .card-img-overlay:hover{
-    opacity:0.8;
-    background-color:white;
+    opacity:.15;
+    background:#fff;
 }
-/* Newpage */
-.add-btn{
-    background-color:red !important;
-}
+
+/* Buttons */
+.add-btn,
 .edit-btn{
-    background-color:red !important;
+    background:#ff385c !important;
+    border:none !important;
 }
-/* show page */
-.show-img{
-    height: 45vh;
-    
-}
-.edit-btn{
-    background-color: red !important;
-}
+
+/* Show Page */
 .show-card{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding:0 !important;
+    border:none !important;
 }
 
+.show-img{
+    width:100%;
+    height:32rem;
+    object-fit:cover;
+    border-radius:1rem;
+}
 
-/* map sttyling */
+/* Map */
 #map{
+    width:100%;
     height:400px;
-    width:80vh;
+    border-radius:1rem;
 }
-.listings-container{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
+
+/* Search */
+.btn-search{
+    background:#ff385c !important;
+    color:white !important;
+    border-radius:25px !important;
+}
+
+.search-input{
+    border-radius:25px !important;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .card-img-top{
+        height:16rem;
+    }
+
+    .show-img{
+        height:18rem;
+    }
+
+    .f-info{
+        height:auto;
+        padding:1rem 0;
+    }
 }
