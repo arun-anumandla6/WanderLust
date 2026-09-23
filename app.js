@@ -17,7 +17,7 @@ const Expresserr = require("./routes/utils/expresserr.js");
 //Routing modules
 const listingsrouter=require("./routes/listing.js");
 const reviewsrouter=require("./routes/review.js");
-const usersrouter=require("./routes/USER.JS");
+const usersrouter=require("./routes/user.js");
 
 //cookie and session modules
 const cookieparse=require("cookie-parser");
